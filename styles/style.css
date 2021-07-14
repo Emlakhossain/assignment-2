@@ -20,6 +20,9 @@ section{
     font-weight: 700px;
     font-size: 64px;
 }
+.half-width h1:hover{
+    color: magenta;
+}
 .button a{
     text-decoration: none;
     color: #ffffff;
@@ -28,6 +31,13 @@ section{
     padding: 10px 24px;
     background-color:#E02C6D; 
     
+}
+.button a:hover{
+    color: black;
+}
+.half-width:hover img{
+    background-color: hotpink;
+    transition: ease;
 }
 .half-width img{
     width: 556.01px;
@@ -44,10 +54,15 @@ section{
     margin-left: 180px;
    
 }
+
 .top-player img{
     width: 330px;
     height: 256px;
     transform: scale(40deg);
+}
+.top-player,img:hover{
+    transition:ease-in;
+    transform-origin: center;
 }
 .top-player{
     width: 330px;
@@ -55,7 +70,7 @@ section{
     padding: 15px;
     margin-top: 70px;
     margin-right: 10px;
-    background-color: honeydew;
+    background-color: #ffffff;
     
     
 }
@@ -98,4 +113,18 @@ footer .logo img{
 .container-logo{
     align-items: center;
     margin-top: 158px;
+}
+/* Media Queries */
+
+@media  only screen {
+   .container{
+       width: 100%;
+   }
+   
+    .half-width, .top-player{
+        grid-template-columns: repeat(1, 1fr);
+        flex-direction: column;
+        
+    }
+    
 }
